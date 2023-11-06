@@ -39,7 +39,7 @@ body:
       description: |
         Describe the steps to reproduce the bug.
         The better your description is _(e.g. go 'here', click 'there'...)_ the more quickly your report can be addressed.
-        **Please include your full `docker run` or Compose files** otherwise your report may be considered incomplete/invalid.
+        **Please include your full `docker run` or Docker Compose file** otherwise your report will be considered incomplete/invalid.
         **If you build your own images, please confirm you can reproduce on the stock image.**
       value: |
         1.
