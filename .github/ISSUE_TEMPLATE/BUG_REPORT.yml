@@ -44,58 +44,57 @@ body:
         3.
       validations:
         required: true
-    - type: textarea
-      id: expected-behavior
-      attributes:
-        label: Expected behavior
-        description: Describe what you expected to happen instead.
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: Describe what you expected to happen instead.
+    validations:
+      required: true
+  - type: dropdown
+    id: nc-version
+    attributes:
+      label: Nextcloud Server version
+      description: |
+        Select Nextcloud Server version.
+        _Versions not listed here are not maintained and not supported anymore_
+      options:
+        - "25"
+        - "26"
+        - "27"
       validations:
         required: true
     - type: dropdown
-      id: nc-version
+      id: fresh
       attributes:
-        label: Nextcloud Server version
-        description: |
-          Select Nextcloud Server version.
-          _Versions not listed here are not maintained and not supported anymore_
+        label: Did this bug arise after an update/upgrade or on a fresh install?
         options:
-          - "25"
-          - "26"
-          - "27"
-        validations:
-          required: true
-      - type: dropdown
-        id: fresh
-        attributes:
-          label: Did this bug arise after an update/upgrade or on a fresh install?
-          options:
-            - "Updated from a MINOR version (e.g. v25.0.1 to v25.0.2)"
-            - "Upgraded between major versions (e.g. v25 to v26)"
-            - "Fresh Nextcloud Server installation"
-      - type: textarea
-        id: nc-config
-        attributes:
-          label: Configuration report
-          description: |
-            Provide information about your configuration.
-          To get this information, execute one of the following commands on the CLI in your app container:
-          ```shell
-          docker compose exec -u33 app ./occ config:list system
-          ./occ config:list system
-          ```
-          > NOTE: This will be automatically formatted into code for better readability.
-      render: shell
+          - "Updated from a MINOR version (e.g. v25.0.1 to v25.0.2)"
+          - "Upgraded between major versions (e.g. v25 to v26)"
+          - "Fresh Nextcloud Server installation"
     - type: textarea
-      id: nc-log
+      id: nc-config
       attributes:
-        label: Nextcloud Logs
+        label: Configuration report
         description: |
-          Provide relevant Nextcloud logs lines (e.g. from when this behavior occurs)
-          Copy from `data/nextcloud.log` or a via *Copy RAW* from the `/settings/admin/logging` section:
-          > NOTE: This will be automatically formatted into code for better readability.
-        render: shell
-    - type: textarea
-      id: additional-info
-      attributes:
-        label: Additional info
-        description: Any additional information related to the issue (ex. browser console errors, server platform, etc).
+          Provide information about your configuration.
+        To get this information, execute one of the following commands on the CLI in your app container:
+        ```shell
+        docker compose exec -u33 app ./occ config:list system
+        ./occ config:list system
+        ```
+        > NOTE: This will be automatically formatted into code for better readability.
+    render: shell
+  - type: textarea
+    id: nc-log
+    attributes:
+      label: Nextcloud Logs
+      description: |
+        Provide relevant Nextcloud and/or Docker logs lines (e.g. from when this behavior occurs)
+        > NOTE: This will be automatically formatted into code for better readability.
+      render: shell
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional info
+      description: Any additional information related to the issue (ex. browser console errors, server platform, etc).
