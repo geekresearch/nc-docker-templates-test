@@ -8,17 +8,17 @@ body:
       value: |
         ### Thank you for contributing to our project!
         Please note this is a **free and open-source** project. Most people take on their own time to help you, so please, be patient.
-        You can obtain [Enterprise support](https://nextcloud.com/support/) if you run Nextcloud Server in a mission critical environment.
+        #### You can obtain [Enterprise support](https://nextcloud.com/support/) if you run Nextcloud Server in a mission critical environment.
   - type: checkboxes
     id: before-posting
     attributes:
-      label: "⚠️ This is the issue tracker of the Nextcloud **Docker** image. ⚠️ Please confirm this is **not:**"
+      label: "⚠️ Please confirm the following points: ⚠️"
       options:
-        - label: "I've posted on the [Nextcloud Community Forum](https://help.nextcloud.com) and this appears to be a bug, not a configuration question or general webserver/proxy/integration issue."
-          required: true
         - label: "This is **not** an issue with Nextcloud Server or a Nextcloud app, but specific to the Docker image."
           required: true
         - label: "I agree to follow Nextcloud's [Code of Conduct](https://nextcloud.com/contribute/code-of-conduct/)."
+          required: true
+        - label: "I've posted on the [Nextcloud Community Forum](https://help.nextcloud.com) for help and this appears to be a bug, not a configuration question or general webserver/proxy/integration issue."
           required: true
   - type: textarea
     id: bug-description
