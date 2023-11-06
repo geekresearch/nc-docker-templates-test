@@ -1,0 +1,101 @@
+name: "🐛 Bug report: Nextcloud Docker Images
+description: "Submit a report and help us improve the Nextcloud Docker image"
+title: ""
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+    values: |
+      ### Thank you for contributing to our project!
+      Please note this is a **free and open-source** project. Most people take on their own time to help you, so please, be patient.
+        You can obtain [Enterprise support](https://nextcloud.com/support/) if you run Nextcloud Server in a mission critical environment.
+  - type: checkboxes
+    id: before-posting
+    attributes:
+      label: "⚠️ This is the issue tracker of the Nextcloud **Docker** image. ⚠️ Please confirm this is **not:**"
+      options:
+        - label: "I've posted on the [Nextcloud Community Forum](https://help.nextcloud.com) and this appears to be a bug, not a configuration question or general webserver/proxy/integration issue."
+          required: true
+        - label: "This is **not** an issue with Nextcloud Server or a Nextcloud app, but specific to the Docker image."
+          required: true
+        - label: "I agree to follow Nextcloud's [Code of Conduct](https://nextcloud.com/contribute/code-of-conduct/)."
+          required: true
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug description
+      description: |
+        Provide a description of the bug you're experiencing.
+        Be as precise as possible.
+      validations:
+        required: true
+    - type: textarea
+      id: reproduce
+      attributes:
+        label: Steps to reproduce
+        description: |
+          Describe the steps to reproduce the bug.
+          The better your description is _(e.g. go 'here', click 'there'...)_ the more quickly your report can be addressed.
+          **Please include your full `docker run` or Compose files** otherwise your report may be considered incomplete/invalid.
+          **If you build your own images, please confirm you can reproduce on the stock image.**
+        value: |
+          1.
+          2.
+          3.
+        validations:
+          required: true
+      - type: textarea
+        id: expected-behavior
+        attributes:
+          label: Expected behavior
+          description: Describe what you expected to happen instead.
+        validations:
+          required: true
+      - type: dropdown
+        id: nc-version
+        attributes:
+          label: Nextcloud Server version
+          description: |
+            Select Nextcloud Server version.
+            _Versions not listed here are not maintained and not supported anymore_
+          options:
+            - "25"
+            - "26"
+            - "27"
+          validations:
+            required: true
+        - type: dropdown
+          id: fresh
+          attributes:
+            label: Did this bug arise after an update/upgrade or on a fresh install?
+            options:
+              - "Updated from a MINOR version (e.g. v25.0.1 to v25.0.2)"
+              - "Upgraded between major versions (e.g. v25 to v26)"
+              - "Fresh Nextcloud Server installation"
+        - type: textarea
+          id: nc-config
+          attributes:
+            label: Configuration report
+            description: |
+              Provide information about your configuration.
+            To get this information, execute one of the following commands on the CLI in your app container:
+            ```shell
+            docker compose exec -u33 app ./occ config:list system
+            ./occ config:list system
+            ```
+            > NOTE: This will be automatically formatted into code for better readability.
+        render: shell
+      - type: textarea
+        id: nc-log
+        attributes:
+          label: Nextcloud Logs
+          description: |
+            Provide relevant Nextcloud logs lines (e.g. from when this behavior occurs)
+            Copy from `data/nextcloud.log` or a via *Copy RAW* from the `/settings/admin/logging` section:
+            > NOTE: This will be automatically formatted into code for better readability.
+          render: shell
+      - type: textarea
+        id: additional-info
+        attributes:
+          label: Additional info
+          description: Any additional information related to the issue (ex. browser console errors, server platform, etc).
