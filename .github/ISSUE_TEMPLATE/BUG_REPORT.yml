@@ -91,7 +91,7 @@ body:
   - type: textarea
     id: nc-log
     attributes:
-      label: Nextcloud Logs
+      label: Nextcloud and/or Docker Logs
       description: |
         Provide relevant Nextcloud and/or Docker logs lines (e.g. from when this behavior occurs)
         > NOTE: This will be automatically formatted into code for better readability.
