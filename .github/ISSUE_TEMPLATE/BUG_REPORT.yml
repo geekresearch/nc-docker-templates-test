@@ -17,7 +17,8 @@ body:
       options:
         - label: "This is **not** an issue with Nextcloud Server or a Nextcloud app, but specific to the Docker image."
           required: true
-        - label: This issue is **not** already reported on [Github](https://github.com/nextcloud/docker/issues?q=is%3Aissue+label%3Abug) _(I've searched it)_.
+        - label: "This issue is **not** already reported on [Github](https://github.com/nextcloud/docker/issues?q=is%3Aissue+label%3Abug) _(I've searched it)_."
+          required: true
         - label: "I agree to follow Nextcloud's [Code of Conduct](https://nextcloud.com/contribute/code-of-conduct/)."
           required: true
         - label: "I've posted on the [Nextcloud Community Forum](https://help.nextcloud.com) for help and this appears to be a bug, not a configuration question or general webserver/proxy/integration issue."
