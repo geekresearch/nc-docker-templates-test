@@ -64,27 +64,27 @@ body:
         - "27"
       validations:
         required: true
-    - type: dropdown
-      id: fresh
-      attributes:
-        label: Did this bug arise after an update/upgrade or on a fresh install?
-        options:
-          - "Updated from a MINOR version (e.g. v25.0.1 to v25.0.2)"
-          - "Upgraded between major versions (e.g. v25 to v26)"
-          - "Fresh Nextcloud Server installation"
-    - type: textarea
-      id: nc-config
-      attributes:
-        label: Configuration report
-        description: |
-          Provide information about your configuration.
+  - type: dropdown
+    id: fresh
+    attributes:
+      label: Did this bug arise after an update/upgrade or on a fresh install?
+      options:
+        - "Updated from a MINOR version (e.g. v25.0.1 to v25.0.2)"
+        - "Upgraded between major versions (e.g. v25 to v26)"
+        - "Fresh Nextcloud Server installation"
+  - type: textarea
+    id: nc-config
+    attributes:
+      label: Configuration report
+      description: |
+        Provide information about your configuration.
         To get this information, execute one of the following commands on the CLI in your app container:
         ```shell
         docker compose exec -u33 app ./occ config:list system
         ./occ config:list system
         ```
         > NOTE: This will be automatically formatted into code for better readability.
-    render: shell
+      render: shell
   - type: textarea
     id: nc-log
     attributes:
