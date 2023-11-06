@@ -21,7 +21,7 @@ body:
           required: true
         - label: "I agree to follow Nextcloud's [Code of Conduct](https://nextcloud.com/contribute/code-of-conduct/)."
           required: true
-        - label: "I've posted on the [Nextcloud Community Forum](https://help.nextcloud.com) for help and this appears to be a bug, not a configuration question or general webserver/proxy/integration issue."
+        - label: "I've posted on the [Nextcloud Community Forum](https://help.nextcloud.com) for help and this appears to be a bug, not a configuration question or general webserver/proxy/integration/docker issue."
           required: true
   - type: textarea
     id: bug-description
