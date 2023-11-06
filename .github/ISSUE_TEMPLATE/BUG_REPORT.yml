@@ -100,4 +100,4 @@ body:
     id: additional-info
     attributes:
       label: Additional info
-      description: Any additional information related to the issue (ex. browser console errors, server platform, etc).
+      description: Any additional information related to the issue (ex. browser console errors, server platform, etc). that you think might be helpful.
