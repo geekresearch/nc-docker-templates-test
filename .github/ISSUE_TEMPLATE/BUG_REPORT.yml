@@ -81,9 +81,9 @@ body:
       label: Configuration report
       description: |
         Provide information about your configuration.
-        To get this information, execute one of the following commands on the CLI in your app container:
+        To get this information, execute one of the following commands (or similar) in your app container:
         ```shell
-        docker compose exec -u33 app ./occ config:list system
+        docker compose exec -u33 <your_app_container_name> ./occ config:list system
         ./occ config:list system
         ```
         > NOTE: This will be automatically formatted into code for better readability.
