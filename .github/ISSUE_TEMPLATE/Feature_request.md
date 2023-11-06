@@ -18,7 +18,7 @@ labels: enhancement
 **Additional context**
 <!-- Add any other context or screenshots about the feature request here. -->
 
-<!-- ---- Please keep the below note for other contributors when they see your enhancement idea ---- -->
+<!-- ---- Please keep the below for other contributors when they see your enhancement idea ---- -->
 
 ## If this enhancement interests you too...
 
