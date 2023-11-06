@@ -6,9 +6,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        ### Thank you for contributing to our project!
+        ### 👍 Thank you for contributing to our project!
         Please note this is a **free and open-source** project. Most people take on their own time to help you, so please, be patient.
-        #### You can obtain [Enterprise support](https://nextcloud.com/support/) if you run Nextcloud Server in a mission critical environment.
+        You can obtain [Enterprise support](https://nextcloud.com/support/) if you run Nextcloud Server in a mission critical environment.
   - type: checkboxes
     id: before-posting
     attributes:
