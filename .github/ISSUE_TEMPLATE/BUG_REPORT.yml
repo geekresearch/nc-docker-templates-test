@@ -27,8 +27,8 @@ body:
       description: |
         Provide a description of the bug you're experiencing.
         Be as precise as possible.
-      validations:
-        required: true
+    validations:
+      required: true
   - type: textarea
     id: reproduce
     attributes:
@@ -42,8 +42,8 @@ body:
         1.
         2.
         3.
-      validations:
-        required: true
+    validations:
+      required: true
   - type: textarea
     id: expected-behavior
     attributes:
@@ -62,8 +62,8 @@ body:
         - "25"
         - "26"
         - "27"
-      validations:
-        required: true
+    validations:
+      required: true
   - type: dropdown
     id: fresh
     attributes:
