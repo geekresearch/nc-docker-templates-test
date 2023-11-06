@@ -1,6 +1,6 @@
 name: "🐛 Bug report: Nextcloud Docker Images"
 description: "Submit a report and help us improve the Nextcloud Docker image"
-title: ""
+title: "[Bug]: "
 labels: ["bug"]
 body:
   - type: markdown
